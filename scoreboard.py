@@ -35,7 +35,16 @@ class Scoreboard:
         self.p2score_rect.left = self.screen_rect.left + 300
         self.p2score_rect.top = 20
 
+        # Display score for victory
+        victory = self.pong_settings.victory
+        victory_str = "{}".format(victory)
+        self.victory_image = self.font.render(victory_str, True, (255, 0, 0), self.pong_settings.bg_color)
+        self.victory_rect = self.victory_image.get_rect()
+        self.victory_rect.right = self.screen_rect.right - 600
+        self.victory_rect.top = 40
+
     def show_score(self):
         """Draw scores to screen"""
         self.screen.blit(self.p1score_image, self.p1score_rect)
         self.screen.blit(self.p2score_image, self.p2score_rect)
+        self.screen.blit(self.victory_image, self.victory_rect)

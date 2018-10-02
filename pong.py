@@ -32,7 +32,7 @@ def run_game():
         # pygame.display.set_caption("Work")
         if stats.game_active:
             paddles.update()
-            # gf.update_ball(pong_settings, screen, stats, sb, ball, paddles)
+            ball.update()
 
         gf.update_screen(pong_settings, screen, stats, sb, play_button, ball, paddles)
 

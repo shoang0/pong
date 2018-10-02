@@ -12,3 +12,8 @@ class Settings:
         # Ball settings
         self.ball_radius = 20
         self.ball_color = (255, 255, 255)
+        self.ball_speed = 6
+
+        # Score to reach for victory
+        self.victory = 7
+        self.victory_color = (255, 0, 0)
